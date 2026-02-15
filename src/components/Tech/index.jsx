@@ -1,15 +1,14 @@
-const Tech = ({isHighLight, data}) => {
-  return (
-    <div>
-      <div className="flex gap-2 text-sm">
-          {
-            data.map((e, i) =>(
-              <div key={`${e}-tech-${i}`} className={`bg-primarySubcontent px-2 py-1 rounded-md ${isHighLight ? "text-primaryTitle" : ""}`}>{e}</div>
-            ))
-          }
-      </div>
-    </div>
-  )
+const Tech = ({isHighlight, data}) => {
+    return (
+        <div className="flex gap-4 text-sm">
+            {
+                data.map((e, i) => (
+                    <div key={`${e}-tech-${i}`} className={`rounded-md bg-primarySubcontent px-4 py-1 ${isHighlight ? "text-primaryAccent" : ""}`}>{e}</div>
+                ))
+            }
+            
+        </div>
+    )
 }
 
 export default Tech;

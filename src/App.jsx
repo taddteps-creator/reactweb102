@@ -1,13 +1,19 @@
+import { useState } from 'react'
 import './App.css'
-import LeftSection from './sections/LeftSection/index';
-import RightSection from './sections/RightSection';
+
+import Header from './section/Header'
+import Navbar from './section/Navbar'
+import Contact from './section/Contact'
+import LeftSection from './section/LeftSection'
+import RightSection from './section/RightSection'
 
 function App() {
-  return (
+  const [count, setCount] = useState(0)
 
-    <div className='mt-14 mx-auto max-w-6xl grid gap-y-5 lg:grid-cols-[40%_60%]'>
-        <LeftSection />
-        <RightSection />
+  return (
+    <div className='mt-14 mx-auto max-w-6xl grid gap-y-4 lg:grid-cols-[40%_60%]'>
+      <LeftSection />
+      <RightSection />
     </div>
   )
 }
